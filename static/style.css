@@ -186,6 +186,7 @@ label{
 }
 
 #result {
+    position: relative;;
     margin-top: 20px;
     font-size: 18px;
     font-weight: 600;
@@ -202,5 +203,8 @@ label{
 @media (max-width: 480px) {
     .heading {
         font-size: 32px;
+    }
+    #result {
+        font-size: 8px;
     }
 }
