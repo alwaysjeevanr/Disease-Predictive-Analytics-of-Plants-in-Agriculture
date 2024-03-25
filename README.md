@@ -44,3 +44,5 @@ To get started with this project, follow the steps below:
 7. Wait for the project to review and merge your pull request.
 
 8. Celebrate your contribution to the Plant Disease Detection project!
+
+9. Thank You
