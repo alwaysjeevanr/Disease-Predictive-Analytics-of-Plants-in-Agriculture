@@ -12,17 +12,11 @@ To get started with this project, follow the steps below:
     git clone https://github.com/alwaysjeevanr/Plant-Disease-Detection-By-Deeplearning.git
     ```
 
-2. Install the required dependencies:
-
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-3. Download the dataset from Kaggle and place it in the appropriate directory.
+2. Download the dataset from Kaggle and place it in the appropriate directory.
     Datasets : https://www.kaggle.com/datasets/neeleshj/plant-village/
     Already Exists in PlantVillage Floder
 
-4. Train the model:
+3. Train the model:
 
     ```bash
     # Edit Paths and run train.ipnb jupyter notebook.
@@ -31,15 +25,15 @@ To get started with this project, follow the steps below:
     This will generate the model file.
     Already `model.h5` exists
 
-5. Start the Flask application:
+4. Start the Flask application:
 
     ```bash
     flask run
     ```
 
-6. Open your web browser and navigate to `http://localhost:5000` to access the Plant Disease Detection application.
+5. Open your web browser and navigate to `http://localhost:5000` to access the Plant Disease Detection application.
 
-7. Make your contribution:
+6. Make your contribution:
 
     - Fork the repository on GitHub.
     - Create a new branch for your contribution.
@@ -47,6 +41,6 @@ To get started with this project, follow the steps below:
     - Push the changes to your forked repository.
     - Open a pull request on the original repository to propose your changes.
 
-8. Wait for the project to review and merge your pull request.
+7. Wait for the project to review and merge your pull request.
 
-9. Celebrate your contribution to the Plant Disease Detection project!
+8. Celebrate your contribution to the Plant Disease Detection project!
