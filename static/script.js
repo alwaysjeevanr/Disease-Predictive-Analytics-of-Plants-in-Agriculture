@@ -46,7 +46,7 @@ $(document).ready(function () {
 				contentType: false,
 			}).done(function (data) {
 				console.log("Done Request!");
-				$("p#result").html(data);
+				$("body").html(data);
 			}).fail(function (e) {
 				console.log("Fail Request!");
 				console.log(e);

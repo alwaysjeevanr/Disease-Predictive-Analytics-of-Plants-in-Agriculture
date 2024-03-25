@@ -32,7 +32,7 @@ def index():
 
 
 # Define the prediction route
-@app.route('/analyze', methods=['POST'])
+@app.route('/analyze', methods=['GET','POST'])
 def analyze():
     print("Analyze route hit")  # Debug print
     if request.method == 'POST':
@@ -57,7 +57,7 @@ def analyze():
                         'Tomato__Tomato_YellowLeaf__Curl_Virus', 'Tomato__Tomato_mosaic_virus', 'Tomato_healthy']
             res = disease_class[np.argmax(preds)]
             print("Disease Name : " + res)  # Debug print
-            return render_template('post.html', prediction_text=f'Disease Name: {res}')
+            return render_template('index.html', prediction_text=f'Disease Name: {res}')
     return None
 
 
