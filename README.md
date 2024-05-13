@@ -20,6 +20,7 @@ To get started with this project, follow the steps below:
 
     ```bash
     # Edit Paths and run train.ipnb jupyter notebook.
+    # Add uploads directory if it not exisits.
     ```
 
     This will generate the model file.
