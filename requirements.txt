@@ -1,0 +1,23 @@
+Flask==2.0.1
+gevent==21.1.2
+greenlet==1.1.2  # Specify a compatible version of greenlet
+numpy==1.21.2
+scikit-image==0.18.3
+tensorflow==2.6.0
+Werkzeug==2.0.1
+keras
+matplotlib
+scikit-learn
+pandas
+seaborn
+opencv-python
+tqdm
+imutils
+pillow
+scipy
+h5py
+imageio
+imgaug
+keras_applications
+keras_preprocessing
+efficientnet
