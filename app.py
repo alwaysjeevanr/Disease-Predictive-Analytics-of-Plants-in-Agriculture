@@ -3,7 +3,7 @@ import tensorflow as tf
 import numpy as np
 from tensorflow import keras
 from skimage import io
-from keras.preprocessing import image 
+from keras.preprocessing import image
 
 # Flask utils
 from flask import Flask, redirect, url_for, request, render_template
@@ -32,7 +32,7 @@ def index():
 
 
 # Define the prediction route
-@app.route('/analyze', methods=['GET','POST'])
+@app.route('/analyze', methods=['GET', 'POST'])
 def analyze():
     print("Analyze route hit")  # Debug print
     if request.method == 'POST':
@@ -46,15 +46,16 @@ def analyze():
             return redirect(request.url)
         if f:
             basepath = os.path.dirname(__file__)
-            file_path = os.path.join(basepath, 'uploads', secure_filename(f.filename))
+            file_path = os.path.join(
+                basepath, 'uploads', secure_filename(f.filename))
             f.save(file_path)
             preds = model_predict(file_path, model)
             print(preds[0])  # Debug print
-            disease_class = ['Pepper__bell___Bacterial_spot', 'Pepper__bell___healthy', 'Potato___Early_blight', 
-                        'Potato___Late_blight', 'Potato___healthy', 'Tomato_Bacterial_spot', 'Tomato_Early_blight', 
-                        'Tomato_Late_blight', 'Tomato_Leaf_Mold', 'Tomato_Septoria_leaf_spot', 
-                        'Tomato_Spider_mites_Two_spotted_spider_mite', 'Tomato__Target_Spot', 
-                        'Tomato__Tomato_YellowLeaf__Curl_Virus', 'Tomato__Tomato_mosaic_virus', 'Tomato_healthy']
+            disease_class = ['Pepper__bell___Bacterial_spot', 'Pepper__bell___healthy', 'Potato___Early_blight',
+                             'Potato___Late_blight', 'Potato___healthy', 'Tomato_Bacterial_spot', 'Tomato_Early_blight',
+                             'Tomato_Late_blight', 'Tomato_Leaf_Mold', 'Tomato_Septoria_leaf_spot',
+                             'Tomato_Spider_mites_Two_spotted_spider_mite', 'Tomato__Target_Spot',
+                             'Tomato__Tomato_YellowLeaf__Curl_Virus', 'Tomato__Tomato_mosaic_virus', 'Tomato_healthy']
             res = disease_class[np.argmax(preds)]
             print("Disease Name : " + res)  # Debug print
             return render_template('index.html', prediction_text=f'Disease Name: {res}')
@@ -63,3 +64,7 @@ def analyze():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+# When defining layers, do NOT use '/' in names
+# Conv2D(64, (7, 7), strides=(2, 2), padding='valid', name='conv1_conv')
+model.save('model.h5')

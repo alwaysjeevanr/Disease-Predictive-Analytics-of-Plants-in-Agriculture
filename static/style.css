@@ -1,79 +1,79 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: 'Merriweather', serif;
-    background-color: #f4f4f4;
+  font-family: "Merriweather", serif;
+  background-color: #f4f4f4;
 }
 
 .container {
-    position: relative;
+  position: relative;
 }
 
 .wrapper {
-    text-align: center;
-    margin-top: 50px;
+  text-align: center;
+  margin-top: 50px;
 }
 
 .heading {
-    font-family: 'Abril Fatface', cursive;
-    font-size: 40px;
-    color: #333;
-    margin-bottom: 10px;
+  font-family: "Abril Fatface", cursive;
+  font-size: 40px;
+  color: #333;
+  margin-bottom: 10px;
 }
 
 .text {
-    font-size: 20px;
-    color: #666;
-    margin-bottom: 30px;
+  font-size: 20px;
+  color: #666;
+  margin-bottom: 30px;
 }
 
 .inner {
-    max-width: 350px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+  max-width: 350px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
 }
 
 .imgbox {
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding-bottom: 75%;
-    /* Aspect ratio 4:3 */
-    overflow: hidden;
-    margin-bottom: 20px;
-    align-items: center;
-    justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 75%;
+  /* Aspect ratio 4:3 */
+  overflow: hidden;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: center;
 }
 
 .img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;    
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .middle {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.6);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
 }
 
 /* .add {
@@ -96,10 +96,9 @@ body {
 } */
 
 .middle:hover {
-    border: 1px dashed #484646;
-    padding: 10px 20px;
-    opacity: 1;
-
+  border: 1px dashed #484646;
+  padding: 10px 20px;
+  opacity: 1;
 }
 
 /* .middle input[type="file"] {
@@ -110,101 +109,101 @@ body {
     opacity: 0;
 } */
 
-input[type="file"]{
-    display: none;
+input[type="file"] {
+  display: none;
 }
 button {
-    border: none;
-    width: 100%;
-    height: 45px;
-    margin-top: 24px;
-    margin-bottom: 24px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    background: #013220;
-    color: #fff;
-    text-transform: uppercase;
-    font-family: "Muli-SemiBold", sans-serif;
-    font-size: 12px;
-    letter-spacing: 2px;
-    transition: all 0.5s;
-    position: relative;
-    overflow: hidden;
+  border: none;
+  width: 100%;
+  height: 45px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: #013220;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Muli-SemiBold", sans-serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+  transition: all 0.5s;
+  position: relative;
+  overflow: hidden;
 }
 
 button span {
-    position: relative;
-    z-index: 2;
+  position: relative;
+  z-index: 2;
 }
 
 button:before,
 button:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    background-color: rgba(0, 128, 0, 0.3);
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-    -webkit-transform: translate(-100%, 0);
-    transform: translate(-100%, 0);
-    -webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
-    transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(0, 128, 0, 0.3);
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-transform: translate(-100%, 0);
+  transform: translate(-100%, 0);
+  -webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+  transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
 }
 
 button:after {
-    -webkit-transition-delay: 0.2s;
-    transition-delay: 0.2s;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
 }
 
 button:hover:before,
 button:hover:after {
-    -webkit-transform: translate(0, 0);
-    transform: translate(0, 0);
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
 }
-label{
-    display: inline-block;
-    text-transform: uppercase;
-    color: #fff;
-    background: #013220;
-    text-align: center;
-    padding: 15px 40px;
-    font-size: 15px;
-    letter-spacing: 1.5px;
-    user-select: none;
-    cursor: pointer;
-    border: 1px dashed #484646;
-    z-index: 5;
+label {
+  display: inline-block;
+  text-transform: uppercase;
+  color: #fff;
+  background: #013220;
+  text-align: center;
+  padding: 15px 40px;
+  font-size: 15px;
+  letter-spacing: 1.5px;
+  /* user-select: none; */
+  cursor: pointer;
+  border: 1px dashed #484646;
+  z-index: 5;
 }
 
 #result {
-    position: relative;;
-    margin-top: 20px;
-    font-size: 18px;
-    font-weight: 600;
-    color: #333;
+  position: relative;
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
 }
 
 /* Media queries for responsiveness */
 @media (max-width: 768px) {
-    .inner {
-        max-width: 100%;
-    }
+  .inner {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 480px) {
-    .heading {
-        font-size: 32px;
-    }
-    #result {
-        font-size: 8px;
-    }
+  .heading {
+    font-size: 32px;
+  }
+  #result {
+    font-size: 8px;
+  }
 }
